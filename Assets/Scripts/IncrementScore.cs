@@ -7,6 +7,7 @@ public class IncrementScore : MonoBehaviour {
 
 	public Text textMoney;
 	private int money;
+	private Touch touches;
 
 	void Start () {
 		
