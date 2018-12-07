@@ -7,7 +7,7 @@ public class IncrementScore : MonoBehaviour
 {
 
 	public Text textMoney;
-	private int money;
+	public int money;
 
 	void Update()
 	{
