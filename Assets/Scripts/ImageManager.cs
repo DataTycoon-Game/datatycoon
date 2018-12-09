@@ -5,16 +5,22 @@ using UnityEngine.UI;
 
 public class ImageManager : MonoBehaviour {
 
-	public Sprite[] textures;
-	public Image uiImageH;
-	private ScoreManager incrementScore;
-	private int numberOfBG;
 	public int i;
 	public int upgradeCost;
+	public Sprite[] textures;
+	public Image uiImageH;
+
+	private int numberOfBG;
+	private float width;
+	private float height;
+
+	private ScoreManager incrementScore;
 
 	void Start() {
 		uiImageH.sprite = textures[0];
 		incrementScore = FindObjectOfType<ScoreManager>();
+
+		SettingImageToCanvasSize();
 	}
 
 	public void ChangeImage() {
@@ -25,5 +31,12 @@ public class ImageManager : MonoBehaviour {
 			i++;
 			upgradeCost = upgradeCost * 2;
 		}
+	}
+
+	void SettingImageToCanvasSize() {
+		width = (float)Screen.width;
+		height = (float)Screen.height;
+
+		uiImageH.rectTransform.sizeDelta = new Vector2(width - 640f, height - 360f);
 	}
 }
