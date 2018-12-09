@@ -10,9 +10,12 @@ public class ScoreManager : MonoBehaviour
 	public int money;
 	private ImageManager imageManager;
 	public Text buttonUpgrade;
+	public Touch touchPos;
+	public MoneyEffect moneyEffect;
 
 	void Start() {
 		imageManager = FindObjectOfType<ImageManager>();
+		moneyEffect = FindObjectOfType<MoneyEffect>();
 	} 
 
 	void Update()
@@ -29,6 +32,8 @@ public class ScoreManager : MonoBehaviour
 			{
 				money++;
 				textMoney.text = "Money: " + money.ToString();
+				touchPos = Input.GetTouch(0);
+				moneyEffect.ShowMoneyEffect();
 			}
 		}
 	}
