@@ -37,6 +37,6 @@ public class ImageManager : MonoBehaviour {
 		width = (float)Screen.width;
 		height = (float)Screen.height;
 
-		uiImageH.rectTransform.sizeDelta = new Vector2(width - 640f, height - 360f);
+		uiImageH.rectTransform.sizeDelta = new Vector2(width, height);
 	}
 }
