@@ -4,6 +4,12 @@ using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class MainMenuManager : MonoBehaviour {
+
+    private Exit exit;
+
+    void Start () {
+        exit = gameObject.GetComponent<Exit>();
+    }
 	
 	public void Play ()
     {
@@ -17,14 +23,14 @@ public class MainMenuManager : MonoBehaviour {
 
     public void Exit ()
     {
-        Debug.Log("Exit");
+        exit.TriggerExitPopupAnimation();
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Application.Quit();
+            exit.TriggerExitPopupAnimation();
         }
     }
 
