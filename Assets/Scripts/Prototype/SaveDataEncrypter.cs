@@ -7,13 +7,16 @@ public class SaveDataEncrypter
 {
 
     public int money;
+	public int imageNumber;
 
-    public SaveDataEncrypter(IncrementMoney incrementMoney)
+	public SaveDataEncrypter(IncrementMoney incrementMoney, ImageManager imageManager)
     {
 
         money = incrementMoney.money;
 
-        Debug.Log(money);
+		imageNumber = imageManager.imageNumber;
+
+        Debug.Log(money + ", " + imageNumber);
 
     }
 
