@@ -5,7 +5,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 public static class SaveDataModel
 {
 
-    public static void SaveData (IncrementMoney incrementMoney)
+	public static void SaveData (IncrementMoney incrementMoney, ImageManager imageManager)
     {
 
         BinaryFormatter formatter = new BinaryFormatter();
@@ -14,7 +14,7 @@ public static class SaveDataModel
 
         FileStream stream = new FileStream(path, FileMode.Create);
 
-        SaveDataEncrypter data = new SaveDataEncrypter(incrementMoney);
+		SaveDataEncrypter data = new SaveDataEncrypter(incrementMoney, imageManager);
 
         formatter.Serialize(stream, data);
         stream.Close();
