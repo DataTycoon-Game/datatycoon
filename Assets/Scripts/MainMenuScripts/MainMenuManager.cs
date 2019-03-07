@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class MainMenuManager : MonoBehaviour {
 
-    private Exit exit;
+    private ExitGame exitGame;
 
     void Start () {
-        exit = gameObject.GetComponent<Exit>();
+        exitGame = gameObject.GetComponent<ExitGame>();
     }
 	
 	public void Play ()
@@ -23,14 +23,14 @@ public class MainMenuManager : MonoBehaviour {
 
     public void Exit ()
     {
-        exit.TriggerExitPopupAnimation();
+        exitGame.TriggerExitPopupAnimation();
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            exit.TriggerExitPopupAnimation();
+            exitGame.TriggerExitPopupAnimation();
         }
     }
 

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Exit : MonoBehaviour
+public class ExitGame : MonoBehaviour
 {
 
     public Animator anim;
@@ -23,7 +23,7 @@ public class Exit : MonoBehaviour
         anim.Play("ReverseExitPopup");
     }
 
-    public void ExitGame(){
+    public void Exit(){
 
         Debug.Log("Game Exited");
         Application.Quit();
