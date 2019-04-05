@@ -11,4 +11,4 @@ This is a basic clicker game in which the player has to click to earn money. In 
 ## Authors
 
 * **Georgi Aleksandrov** - *Scripting/Level Design/GUI* - [Krezme](https://github.com/Krezme)
-* **Yordan Hristov** - *GUI/Level Design/Game Logic/Scripting* - [Dantcho](https://github.com/Dantcho-BG)
+* **Yordan Hristov** - *GUI/Level Design/Game Logic/Scripting* - [Dantcho](https://github.com/DantchoLV9)
